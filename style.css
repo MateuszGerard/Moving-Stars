@@ -1,0 +1,93 @@
+.panel {
+	margin: 0 auto;
+	max-width: 480px;
+	background-color: lightblue;
+	box-shadow: 5px 5px 10px gray;
+}
+.star8 {
+	display: inline-block;
+	margin: 2em;
+	transform: rotate(22deg);
+	transition: background linear .3s;
+	transform-origin: center;
+	animation: spinAnim 2s;
+	animation-iteration-count: 2;
+}
+.star8:hover {
+	transform-origin: center;
+	animation: spinAnimHover 1s;
+	animation-iteration-count: 1;
+}
+.star8:before {
+	background-color: #FFF;
+	content: "";
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	transform: rotate(45deg);
+}
+.star8,
+.star8:before,
+.star8 i.fa {
+	transition: ease-in-out .3s;
+	width: 80px;
+	height: 80px;
+}
+.star8:hover .fa {
+	color: #FFF;
+}
+.gold, 
+.gold:before {
+	border: 6px solid #ffc107;
+}
+.orange,
+.orange:before {
+	border: 6px solid #fd7e33;
+}
+.blue, 
+.blue:before {
+	border: 6px solid #3fb0ac;
+}
+.fa {
+	margin: 0;
+	position: absolute;
+	background-color: #FFF;
+	font-size: 60px;
+}
+.fa:before {
+	transform: rotate(-22deg);
+	position: absolute;
+	margin: 10px;
+}
+.gold:hover:before, 
+.gold:hover,
+.gold:hover i.fa {
+	background-color: #ffc107;
+}
+.orange:hover:before, 
+.orange:hover,
+.orange:hover i.fa {
+	background-color: #fd7e33;
+}
+.blue:hover:before, 
+.blue:hover,
+.blue:hover i.fa {
+	background-color: #3fb0ac;
+}
+.gold {							
+	animation-delay: 0.5s;
+}
+.orange {
+	animation-delay: 1s;
+}
+.blue {
+	animation-delay: 1.5s;	
+}
+@keyframes spinAnim {
+	from { transform: rotate(22deg); }
+	to { transform: rotate(382deg); }
+}
+@keyframes spinAnimHover {
+	from { transform: rotate(22deg); }
+	to { transform: rotate(-338deg); }
+}
